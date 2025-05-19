@@ -1,21 +1,31 @@
-/* Estilos Gerais */
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #b8a9d8;
 }
 
 header {
-  background-color: #333;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 23, 42, 0.8);
+  width: 100%;
+  z-index: 100;
   color: white;
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 3rem;
   display: flex;
   justify-content: center;
 }
@@ -27,13 +37,35 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
 }
+
+nav ul li a::after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #4ecdc4, #349090);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
 
 section {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 p span {
@@ -96,63 +128,138 @@ h4 {
 @keyframes glow-border {
   0% {
     box-shadow: 0 0 10px #4ecdc4,
-    0 0 20px #349090;
+      0 0 20px #349090;
   }
 
   100% {
     box-shadow: 0 0 30px #a3e6de,
-    0 0 60px #4ECDE4;
+      0 0 60px #4ECDE4;
   }
 }
 
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #333;
-}
+
 
 /* Projetos */
-.projetos-container {
+
+.projetos {
+  padding: 6px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.projeto {
-  background-color: white;
-  padding: 20px;
+
+/* Título da seção de projetos */
+
+.projeto-titulo {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1300px;
+
+}
+
+.imagem-projeto {
+  height: 200px;
+  width: 90%;
+  border-radius: 20px;
+  object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 45%;
+  padding: 5px;
+}
+
+.projeto-card {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px;
+  solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
   text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.projeto h3 {
-  color: #333;
+.projeto-card:hover {
+  box-shadow: #555 0px 0px 10px;
+  transform: translateY(-5px) scale(1.05);
 }
 
-.projeto a {
+.projeto-card a {
+  font-size: 10px;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 5px;
   text-decoration: none;
   color: #333;
   border: 2px solid #333;
   padding: 8px 15px;
   border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 8px;
 }
 
-.projeto a:hover {
-  background-color: #333;
+.projeto-card h3 {
+  color: #333;
+}
+
+.projeto-card p {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #333;
+  padding: 8px 15px;
+}
+
+.projeto-card a:hover {
+  background-color: #28a745;
   color: white;
 }
 
 /* Habilidades */
-ul {
+
+.habilidades {
+  padding: 6px 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.habilidade-titulo {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.habilidade-lista{
   list-style: none;
-  padding: 0;
+  padding: 10px;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
+}
+
+.html,
+.css,
+.js,
+.git {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.5s ease;
+}
+
+.html:hover,
+.css:hover,
+.js:hover,
+.git:hover {
+  box-shadow: #555 0px 0px 10px;
+  transform: translateY(-10px) scale(1.05);
 }
 
 ul li {
@@ -161,37 +268,62 @@ ul li {
 }
 
 /* Contato */
-form {
+
+#contato {
+  padding: 6px 3%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgba(250, 248, 248, 0.1);
+  padding: 2rem;
+}
+
+.contato-titulo {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
 }
 
 form label {
-  font-size: 18px;
+  display: block;
+  margin: 0.5rem 0 0.2rem;
 }
 
 form input,
 form textarea {
-  padding: 10px;
-  font-size: 16px;
+  width: 100%;
+  padding: 0.8rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 form button {
-  padding: 10px;
-  background-color: #333;
+  background-color: #28a745;
   color: white;
+  padding: 0.8rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
 }
 
 form button:hover {
-  background-color: #555;
+  background-color: #218838;
 }
 
 /* Responsividade */

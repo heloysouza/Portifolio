@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio | [Seu nome]</title>
+  <title>Portfólio | Heloilton Souza Laurentino</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,79 +28,98 @@
     <div class="conteudo-sobre">
       <h4>Sobre Mim</h4>
       <div class="perfil">
-        <p class="descrição">Olá! Eu sou <span>[Seu nome]</span>, um desenvolvedor apaixonado por criar soluções
+        <p class="descrição">Olá! Eu sou <span>Heloilton Souza Laurentino</span>, um desenvolvedor apaixonado por criar
+          soluções
           inovadoras na web. Estou em transição de carreira para a área de programação e estou ansioso para colocar meus
           conhecimentos em prática.</p>
       </div>
     </div>
-    <img src="img/Tony Stark3.jpeg" alt="Foto de Perfil" class="foto-perfil">
+    <img src="img/Heloy1.jpeg" alt="Foto de Perfil" class="foto-perfil">
 
 
 
   </section>
 
   <!-- Seção Projetos -->
-  <section id="projetos">
-    <h2>Meus Projetos</h2>
+  <section id="projetos" class="projetos">
+    <div>
+      <h2 class="projeto-titulo">Meus Projetos</h2>
+    </div>
     <div class="projetos-container">
+
       <!-- Projeto 1 -->
-      <div class="projeto">
-        <h3>Projeto 1 - Celular X</h3>
-        <p>Uma landing page para o produto fictício Celular X.</p>
+      <div class="projeto-card">
+        <img src="img/celular.png" alt="Celular X" class="imagem-projeto">
+        <h3 class="titulo-projeto-card"> Celular X</h3>
+        <p class="infor-projeto-card">Uma landing page para o produto fictício Celular X.</p>
         <a href="https://github.com/seu-usuario/projeto-celular-x" target="_blank">Ver Projeto</a>
       </div>
+
       <!-- Projeto 2 -->
-      <div class="projeto">
-        <h3>Projeto 2 - Portfólio</h3>
-        <p>Meu portfólio pessoal criado para mostrar meus projetos e habilidades.</p>
+      <div class="projeto-card">
+        <img src="img/portifolio.png" alt="Portfólio" class="imagem-projeto">
+        <h3 class="titulo-projeto-card"> Portfólio</h3>
+        <p class="infor-projeto-card">Meu portfólio pessoal criado para mostrar meus projetos e habilidades.</p>
         <a href="https://github.com/seu-usuario/portfolio" target="_blank">Ver Projeto</a>
       </div>
-            <!-- Projeto 3 -->
-            <div class="projeto">
-              <h3>Projeto 3 - sua escolha</h3>
-              <p>Meu portfólio pessoal criado para mostrar meus projetos e habilidades.</p>
-              <a href="https://github.com/seu-usuario/portfolio" target="_blank">Ver Projeto</a>
-            </div>
-                  <!-- Projeto 4 -->
-      <div class="projeto">
-        <h3>Projeto 4 - escolha outro</h3>
-        <p>Meu portfólio pessoal criado para mostrar meus projetos e habilidades.</p>
-        <a href="https://github.com/seu-usuario/portfolio" target="_blank">Ver Projeto</a>
+
+      <!-- Projeto 3 -->
+      <div class="projeto-card">
+        <img src="img/formulario.png" alt="Formulário Contato Responsivo" class="imagem-projeto">
+        <h3 class="titulo-projeto-card"> Formulário Contato Responsivo</h3>
+        <p class="infor-projeto-card">Este projeto é uma página com um formulário de contato.</p>
+        <a href="https://github.com/heloysouza/Formulario-Contato-Responsivo.git" target="_blank">Ver Projeto</a>
+      </div>
+
+      <!-- Projeto 4 -->
+      <div class="projeto-card">
+        <img src="img/projeto.png" alt="Celular X" class="imagem-projeto">
+        <h3 class="titulo-projeto-card"> Galeria de Fotos - Natureza</h3>
+        <p class="infor-projeto-card">Projeto de página de galeria de fotos de natureza, com efeitos visuais.</p>
+        <a href="https://github.com/heloysouza/galeria-natureza.git" target="_blank">Ver Projeto</a>
       </div>
     </div>
   </section>
 
   <!-- Seção Habilidades -->
-  <section id="habilidades">
-    <h2>Habilidades</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Git</li>
-    </ul>
-  </section>
+  <div>
+    <section id="habilidades" class="habilidades">
+      <div>
+        <h2 class="habilidade-titulo">Minhas Habilidades</h2>
+      </div>
+
+      <div>
+        <ul class="habilidade-lista">
+          <li class="html">HTML <img src="img/html.png" width="100px"></li>
+          <li class="css">CSS <img src="img/css.png" width="100px"></li>
+          <li class="js">JavaScript <img src="img/js.png" width="100px"></li>
+          <li class="git">Git <img src="img/git.png" width="100px"></li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
   <!-- Seção Contato -->
-  <section id="contato">
-    <h2>Entre em Contato</h2>
+  <section id="contato" class="contato">
+    <div>
+      <h2 class="contato-titulo">Entre em Contato</h2>
+    </div>
     <form>
       <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" required>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required>
 
       <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem..." required></textarea>
 
       <button type="submit">Enviar</button>
     </form>
   </section>
 
   <footer>
-    <p class="rodape">&copy; 2025 [Seu nome]. Todos os direitos reservados.</p>
+    <p class="rodape">&copy; 2025 Heloilton S. Laurentino. Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
