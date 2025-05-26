@@ -8,13 +8,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
   <!-- Cabeçalho -->
-  <header>
-    <nav>
-      <h1>Meu Portfólio</h1>
-      <ul>
+  <header class="cabecalho">
+    <nav class="navegacao">
+      <div class="logo">
+        <h1>Meu Portfólio</h1>
+      </div>
+      <button class="botao-menu">☰</button>
+      <ul class="menu">
         <li><a href="#sobre">Sobre Mim</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
@@ -24,9 +28,10 @@
   </header>
 
   <!-- Seção Sobre Mim -->
-  <section id="sobre">
+  <section class="sobre" id="sobre">
     <div class="conteudo-sobre">
       <h4>Sobre Mim</h4>
+
       <div class="perfil">
         <p class="descrição">Olá! Eu sou <span>Heloilton Souza Laurentino</span>, um desenvolvedor apaixonado por criar
           soluções
@@ -34,10 +39,9 @@
           conhecimentos em prática.</p>
       </div>
     </div>
-    <img src="img/Heloy1.jpeg" alt="Foto de Perfil" class="foto-perfil">
-
-
-
+    <div class="foto-perfil">
+      <img src="img/Heloy1.jpeg" alt="Foto de Perfil">
+    </div>
   </section>
 
   <!-- Seção Projetos -->
