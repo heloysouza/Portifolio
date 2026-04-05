@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Portfólio Futurista</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background: #0a0a0f;
+    font-family: 'Poppins', sans-serif;
+    color: #eaeaf0;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(20,20,30,0.6);
+    backdrop-filter: blur(10px);
+}
+
+nav h1 {
+    font-family: 'Orbitron';
+    color: #00f5ff;
+}
+
+nav a {
+    color: #eaeaf0;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f5ff;
+    text-shadow: 0 0 10px #00f5ff;
+}
+
+/* SECTION */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+/* TEXTO */
+.text h2 {
+    font-family: 'Orbitron';
+    font-size: 40px;
+}
+
+.text span {
+    color: #00f5ff;
+}
+
+/* FOTO */
+.foto {
+    position: relative;
+}
+
+.foto img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+}
+
+/* GLOW */
+.foto::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, #00f5ff, #8a2be2);
+    border-radius: 50%;
+    filter: blur(30px);
+    z-index: 1;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 1px solid #00f5ff;
+    color: #00f5ff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00f5ff;
+    color: #000;
+    box-shadow: 0 0 15px #00f5ff;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Meu Portfólio</h1>
+    <div>
+        <a href="#">Sobre</a>
+        <a href="#">Projetos</a>
+        <a href="#">Contato</a>
+    </div>
+</nav>
+
+<section class="container">
+    <div class="text">
+        <h2>Sobre <span>Mim</span></h2>
+        <p>
+            Olá! Eu sou <span>Heloilton</span>, desenvolvedor focado em criar experiências modernas e futuristas na web.
+        </p>
+
+        <a href="#" class="btn">Ver Projetos</a>
+    </div>
+
+    <div class="foto">
+        <img src="img/Heloy-executivo.jpeg" alt="Foto de Perfil">
+    </div>
+</section>
+
+</body>
+</html>
