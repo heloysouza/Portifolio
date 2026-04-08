@@ -8,7 +8,7 @@ Criar uma página responsiva e estilizada para apresentar um pouco sobre mim, mi
 
 ## 📸 Preview
 
-![Preview do projeto](img/portifolio.png)
+![Preview do projeto](img/portifolioblack.png)
 
 ## 🛠️ Tecnologias Utilizadas
 

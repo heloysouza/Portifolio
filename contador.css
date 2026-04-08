@@ -1,0 +1,65 @@
+  body-1 {
+    background: #0a0a0a;
+    color: #00f7ff;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    ;
+  }
+
+  .contador-box {
+    text-align: center;
+    border: 1px solid #00f7ff;
+    padding: 1px;
+    box-shadow: 0 0 20px #00f7ff;
+    margin-right: 20px;
+        margin-bottom: 20px;
+  }
+
+  .titulo {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .contador {
+    align-items: center;
+    font-size: 40px;
+    text-shadow:
+      0 0 5px #00f7ff,
+      0 0 10px #00f7ff,
+      0 0 20px #00f7ff;
+  }
+
+  /* Efeito glitch */
+  .glitch {
+    position: relative;
+    animation: glitch 1s infinite;
+  }
+
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: translate(-2px, 2px);
+    }
+
+    40% {
+      transform: translate(-2px, -2px);
+    }
+
+    60% {
+      transform: translate(2px, 2px);
+    }
+
+    80% {
+      transform: translate(2px, -2px);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
