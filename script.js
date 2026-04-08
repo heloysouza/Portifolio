@@ -12,29 +12,19 @@ botao.addEventListener('click', () => {
 
 })
 
-  async function atualizarContador() {
-    const response = await fetch("https://api.countapi.xyz/hit/heloy-portfolio/visitas");
+
+async function atualizarContador() {
+  try {
+    const response = await fetch("https://api.counterapi.dev/v1/heloy-portfolio-2026/visitas/up");
     const data = await response.json();
 
-    animarNumero(data.value);
+    console.log(data); // 👈 veja no console
+
+    document.getElementById("contador").innerText = data.count;
+
+  } catch (erro) {
+    console.error("Erro:", erro);
   }
+}
 
-  function animarNumero(valorFinal) {
-    let atual = 0;
-    const incremento = Math.ceil(valorFinal / 50);
-
-    const intervalo = setInterval(() => {
-      atual += incremento;
-
-      if (atual >= valorFinal) {
-        atual = valorFinal;
-        clearInterval(intervalo);
-      }
-
-      document.getElementById("contador").innerText = atual;
-    }, 30);
-  }
-
-  atualizarContador();
-
-
+atualizarContador();
